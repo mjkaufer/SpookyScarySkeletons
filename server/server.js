@@ -16,12 +16,28 @@ Meteor.Paypal.config({
 });
 
 
+
+// Meteor.users.allow({
+// 	insert:function(){return false;},
+// 	update:function(){return false;},
+// 	remove:function(){return false;}
+// })
+
 Meteor.methods({
 	'sendCall':function(number){
 		
-		/*if(Meteor.users.find(this.userId()).profile.credits <= 0)
-			Meteor.call('callback',"You don't have enough credits!",true);
-		*/
+		Meteor.call('callback',this.userId + ":" + this.userId(),true);		
+
+		
+		if(this.userId == undefined)
+			return Meteor.call('callback',"You need to be logged in, sneaky!",true);
+		
+		if(Meteor.users.find(this.userId()).profile.credits <= 0)
+			return Meteor.call('callback',"You don't have enough credits!",true);
+		
+			
+		
+		Meteor.users.update({_id:this.userId},{$inc:{"profile.credits":-1}});//subtract credits
 		
 		twilioClient.makeCall({
 			url: "http://twimlets.com/echo?Twiml=" + encodeURIComponent(xml),
