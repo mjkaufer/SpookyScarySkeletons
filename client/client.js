@@ -1,7 +1,7 @@
 Meteor.methods({
 	'callback':function(message,worked){
 		if(worked)//call went through without errors
-			alert("Your call to " + message + " has been completed!");
+			alert(message);
 		else
 			alert("Call didn't go through - some error");
 	}

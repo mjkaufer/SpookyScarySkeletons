@@ -1,12 +1,17 @@
 <body>
 
+	{{> loginButtons}}
 	<div class="form-group">
 		<h1>Spook-Machine</h1>
 		<p><b>Spook your friends! OOOooooohhhhhh.</b></p>
-		<small>Note: This costs money. If you want to help out, send me money via PayPal to mjkaufer[at]gmail[dot]com</small>
-		<input type="tel" id="number" class="form-control" placeholder="Number to Spook">
-		<br>
-		<button id="button" class="btn btn-block btn-lg btn-warning">Spook Friends</button>
+		{{#if currentUser}}
+			<small>Note: This costs money. If you want to help out, send me money via PayPal to mjkaufer[at]gmail[dot]com</small>
+			<input type="tel" id="number" class="form-control" placeholder="Number to Spook">
+			<br>
+			<button id="button" class="btn btn-block btn-lg btn-warning">Spook Friends</button>
+		{{else}}
+			<p>Please log in first</p>
+		{{/if}}
 		
 	</div>
 
