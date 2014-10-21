@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <Response>
-<Say>What's going on?</Say>
-<Play>http://a.tumblr.com/tumblr_lzwmdvN4dS1qckxe1o1.mp3</Play>
-<Say>Thank you! Bye</Say>
+<Play>http://a.tumblr.com/tumblr_m63st6Rziy1qksrl0o1.mp3</Play>
+<Say>You have been spooked by the spooky scary skeletons. Spook more people or die!</Say>
 </Response>
