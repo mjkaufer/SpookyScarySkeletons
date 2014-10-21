@@ -1,6 +1,6 @@
-# WhatsGoingOn
+# Spook-Machine
 
-Tool to send automatic phone calls to your friends asking what's going on!
+Tool to spook your friends. **Spooky**
 
 ## To Start
 
