@@ -8,7 +8,7 @@ http
 mrt:moment
 mrt:twilio-meteor
 mrt:flat-ui
-accounts-base
 accounts-ui
 accounts-facebook
 mrt:paypal
+accounts-base

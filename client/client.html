@@ -1,18 +1,40 @@
 <body>
+	{{> main}}
+	{{> buy}}
+</body>
 
+<template name="buttons">
+	<small>Note: This costs money. If you want to help out, send me money via PayPal to mjkaufer[at]gmail[dot]com</small>
+	<input type="tel" id="number" class="form-control" placeholder="Number to Spook">
+	<br>
+	<button id="button" class="btn btn-block btn-lg btn-warning">Spook Friends</button>
+</template>
+
+<template name="main">
 	{{> loginButtons}}
 	<div class="form-group">
 		<h1>Spook-Machine</h1>
 		<p><b>Spook your friends! OOOooooohhhhhh.</b></p>
 		{{#if currentUser}}
-			<small>Note: This costs money. If you want to help out, send me money via PayPal to mjkaufer[at]gmail[dot]com</small>
-			<input type="tel" id="number" class="form-control" placeholder="Number to Spook">
-			<br>
-			<button id="button" class="btn btn-block btn-lg btn-warning">Spook Friends</button>
+			{{> buttons}}
 		{{else}}
 			<p>Please log in first</p>
 		{{/if}}
 		
 	</div>
+</template>
 
-</body>
+<template name="buy">
+	<div class="form-group" id="pay">
+		{{> paypalCreditCardForm}}
+		<label>Name</label><input id="name" class="form-control" placeholder="Name on Card">
+		<select name="card_type" id="card-type" class="form-control" style="width:10%">
+		  	<option selected="selected">Card Type</option>
+			<option value="visa"> Visa </option>
+			<option value="mastercard"> Mastercard </option>
+			<option value="americanexpress"> American Express </option>
+			<option value="discover"> Discover </option>
+		</select>
+		<label>Card Number</label><input id="number" class="form-control" placeholder="Card Number">
+	</div>
+</template>

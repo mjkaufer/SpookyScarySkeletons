@@ -15,9 +15,26 @@ body{
 .btn{/*spooky styles*/
 	background-color:#d35400;
 	color:#000;
+	border:solid #000 1px;
 }
 
-.btn{
+.btn:hover{
 	background-color:#e67e22;
 	color:#000;
+}
+
+.btn:active{
+	background-color:#e67e22;
+	color:#000;
+}
+
+#pay{
+	border:solid #fff 1px;
+	margin-top:1em;
+	margin-bottom: 1em;
+	border-radius:1em;
+}
+
+#pay{
+	padding:1em;
 }
